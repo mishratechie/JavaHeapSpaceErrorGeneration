@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE report SYSTEM "report.dtd"> -->
+<report>
+	<summary>
+		<project name="test">
+			<scenario name="scenario1">
+				<description>
+				</description>
+				<loadpolicies>
+					<constantpolicy count="2" population="Population1" />
+				</loadpolicies>
+				<loadgenerators>
+					<loadgenerator name="localhost" />
+				</loadgenerators>
+				<dataFilters />
+				<populations>
+					<population name="Population1">
+						<populationSplits>
+							<populationSplit browserProfileName="Recorded one"
+								cache="1" connections="6" cookies="true" downloadBandwidth="Unlimited"
+								downloadLatency="0ms" downloadPacketLoss="0%" factor="100.0"
+								name="VirtualUser" signalStrength="" uploadBandwidth="Unlimited"
+								uploadLatency="0ms" uploadPacketLoss="0%" userAgent=""
+								wanEmulationProfileName="Unlimited" />
+						</populationSplits>
+					</population>
+				</populations>
+				<virtual-user-profiles>
+					<virtual-user-profile errorPolicy="DO_NOTHING"
+						failedAssertionPolicy="DO_NOTHING" name="VirtualUser">
+						<thinktime-policy thinkTimeMode="MODE_SIMPLE_THINK_TIME"
+							thinktimeFactorValue="100" thinktimePolicy="0"
+							thinktimeRangeValue="0" thinktimeValue="5000" />
+					</virtual-user-profile>
+				</virtual-user-profiles>
+				<rdv-collection />
+			</scenario>
+			<sla-profiles />
+			<sla-profiles-details />
+			<settings>
+				<truncatedMean centeredInterval="true" percentage="90" />
+			</settings>
+		</project>
+		<test duration="00:02:00" end="Jul 23, 2014 3:21:25 PM" start="Jul 23, 2014 3:19:24 PM"
+			std_start_time="2014-07-23 15:19:24" />
+		<statistics image="images/summary.png">
+			<statistic name="avg_hits/s" severity="none" unit="" value="1.3" />
+			<statistic name="avg_pages/s" severity="none" unit=""
+				value="0.5" />
+			<statistic name="avg_reqresponsetime" severity="none" unit="s"
+				value="0.44" />
+			<statistic name="avg_pageresponsetime" severity="none"
+				unit="s" value="1.04" />
+			<statistic name="avg_throughput" severity="none" unit=" Mb/s"
+				value="0.03" />
+			<statistic name="total_pages" severity="none" unit=""
+				value="64" />
+			<statistic name="total_hits" severity="none" unit="" value="152" />
+			<statistic name="total_users_launched" severity="none"
+				unit="" value="2" />
+			<statistic name="total_throughput" severity="none" unit=" MB"
+				value="0.38" />
+			<statistic name="total_iterations_completed" severity="none"
+				unit="" value="8" />
+			<statistic name="total_errors" severity="none" unit=""
+				value="32" />
+			<statistic name="error_percentile" severity="none" unit="%"
+				value="21.1" />
+			<statistic name="total_logical_actions_errors" severity="none"
+				unit="" value="0" />
+			<statistic name="total_alerts_percentage" severity="none"
+				unit="%" value="0" />
+		</statistics>
+		<hotspots>
+			<toperrors>
+				<top count="8" name="/app/rest/tracking" parentName="Actions"
+					vuName="VirtualUser" />
+				<top count="8" name="/" parentName="Actions" vuName="VirtualUser" />
+				<top count="8" name="/favicon.ico_1" parentName="Actions"
+					vuName="VirtualUser" />
+				<top count="8" name="/favicon.ico" parentName="Actions" vuName="VirtualUser" />
+			</toperrors>
+			<topalerts />
+			<firstalerts />
+			<topavg>
+				<top count="" duration="4.12" name="/app/rest/tracking"
+					parentName="Actions" vuName="VirtualUser" />
+				<top count="" duration="1.35"
+					name="/oam/SSOPOST/metaAlias/External/psc-rbmobile-idp-test"
+					parentName="Actions" vuName="VirtualUser" />
+				<top count="" duration="1.07" name="/oam/UI/Login" parentName="Actions"
+					vuName="VirtualUser" />
+				<top count="" duration="0.655"
+					name="/app/projects/f74785d9-93a0-4427-b5d7-c2262048c0dc"
+					parentName="Actions" vuName="VirtualUser" />
+				<top count="" duration="0.348"
+					name="/app/projects/f74785d9-93a0-4427-b5d7-c2262048c0dc_1"
+					parentName="Actions" vuName="VirtualUser" />
+			</topavg>
+			<topmax>
+				<top count="" duration="4.44" name="/app/rest/tracking"
+					parentName="Actions" vuName="VirtualUser" />
+				<top count="" duration="1.58"
+					name="/oam/SSOPOST/metaAlias/External/psc-rbmobile-idp-test"
+					parentName="Actions" vuName="VirtualUser" />
+				<top count="" duration="1.56"
+					name="/app/projects/f74785d9-93a0-4427-b5d7-c2262048c0dc"
+					parentName="Actions" vuName="VirtualUser" />
+				<top count="" duration="1.2" name="/oam/UI/Login" parentName="Actions"
+					vuName="VirtualUser" />
+				<top count="" duration="0.446"
+					name="/app/projects/f74785d9-93a0-4427-b5d7-c2262048c0dc_1"
+					parentName="Actions" vuName="VirtualUser" />
+			</topmax>
+			<pushtopavg />
+			<pushtopmax />
+		</hotspots>
+		<requests-errors-summary>
+			<error-summary count="20"
+				description="Not Found - The server has not found anything matching the Request-URI."
+				name="404" />
+			<error-summary count="8"
+				description="Validation of the response failed." name="Assertions" />
+			<error-summary count="4"
+				description="The link or form could not be extracted from the previous request. The definition does not match any link or form in the previous request."
+				name="NL-LINKEXTRACTOR-02" />
+			<error-summary count="32" description="Total error count."
+				name="Total">
+				<description>Total error count.</description>
+			</error-summary>
+		</requests-errors-summary>
+		<logical-actions-errors-summary />
+		<thirdparty-data-errors-summary />
+		<alerts-summary />
+		<all-summary>
+			<statistic-item avg="48.3" error_rate="100" errors="2"
+				hits="2" id="ce5c038b-c49b-3c86-a887-9ec9d0057958" max="48.4"
+				median="48.3" min="48.3" name="All Virtual Users" stddev="&lt;0.01"
+				truncatedMean="48.3" type="virtualuser" />
+			<statistic-item avg="6.53" error_rate="50" errors="6"
+				hits="12" id="e0dbf49a-8f90-339a-b538-dbc0b4e8401b" max="14.2"
+				median="&lt;0.01" min="&lt;0.01" name="All containers" stddev="&lt;0.01"
+				truncatedMean="&lt;0.01" type="container" />
+			<statistic-item avg="1.04" error_rate="50" errors="32"
+				hits="64" id="b3b4c2e9-62ea-3b64-b964-846614544b6b" max="4.44"
+				median="0.526" min="&lt;0.01" name="All pages" stddev="1.23"
+				truncatedMean="0.859" type="httppage" />
+			<statistic-item avg="0.44" error_rate="21.1" errors="32"
+				hits="152" id="a181a603-769c-3f98-ad92-7e7367c7aa51" max="1.58"
+				median="0.334" min="&lt;0.01" name="All requests" stddev="0.277"
+				truncatedMean="0.388" type="httprequest" />
+		</all-summary>
+	</summary>
+	<shared-elements />
+	<servers>
+		<server host="rbm-main-int.progress.com" port="443" spdyready="false"
+			spdyused="false" />
+		<server host="secure-test.progress.com" port="443" spdyready="false"
+			spdyused="false" />
+	</servers>
+	<zones_statistics avgDurationZonesImage="images/avgDurationZones.png"
+		errorsZonesImage="images/errorsZones.png">
+		<zone_statistics escapedName="@default zone"
+			hitsImage="images/hits_zone_@default zone.png" loadImage="images/load_zone_@default zone.png"
+			name="Default zone">
+			<statistic name="nb_of_lgs" severity="none" unit="" value="1" />
+			<statistic name="avg_hits/s" severity="none" unit="" value="1.3" />
+			<statistic name="avg_pages/s" severity="none" unit=""
+				value="0.5" />
+			<statistic name="avg_reqresponsetime" severity="none" unit="s"
+				value="0.44" />
+			<statistic name="avg_pageresponsetime" severity="none"
+				unit="s" value="1.04" />
+			<statistic name="avg_throughput" severity="none" unit=" Mb/s"
+				value="0.03" />
+			<statistic name="total_pages" severity="none" unit=""
+				value="64" />
+			<statistic name="total_hits" severity="none" unit="" value="152" />
+			<statistic name="total_users_launched" severity="none"
+				unit="" value="0" />
+			<statistic name="total_throughput" severity="none" unit=" MB"
+				value="0.38" />
+			<statistic name="total_iterations_completed" severity="none"
+				unit="" value="0" />
+			<statistic name="total_errors" severity="none" unit=""
+				value="32" />
+			<statistic name="error_percentile" severity="none" unit="%"
+				value="21.1" />
+			<statistic name="total_logical_actions_errors" severity="none"
+				unit="" value="0" />
+			<statistic name="total_hits_percentage" severity="none"
+				unit="" value="100%" />
+			<statistic name="avg_pageresponsetime_diff" severity="none"
+				unit="s" value="0%" />
+			<statistic name="error_percentile_diff" severity="none"
+				unit="%" value="0%" />
+		</zone_statistics>
+		<global_statistics escapedName="" hitsImage=""
+			loadImage="" name="">
+			<statistic name="nb_of_lgs" severity="none" unit="" value="1" />
+			<statistic name="avg_hits/s" severity="none" unit="" value="1.3" />
+			<statistic name="avg_pages/s" severity="none" unit=""
+				value="0.5" />
+			<statistic name="avg_reqresponsetime" severity="none" unit="s"
+				value="0.44" />
+			<statistic name="avg_pageresponsetime" severity="none"
+				unit="s" value="1.04" />
+			<statistic name="avg_throughput" severity="none" unit=" Mb/s"
+				value="0.03" />
+			<statistic name="total_pages" severity="none" unit=""
+				value="64" />
+			<statistic name="total_hits" severity="none" unit="" value="152" />
+			<statistic name="total_users_launched" severity="none"
+				unit="" value="2" />
+			<statistic name="total_throughput" severity="none" unit=" MB"
+				value="0.38" />
+			<statistic name="total_iterations_completed" severity="none"
+				unit="" value="8" />
+			<statistic name="total_errors" severity="none" unit=""
+				value="32" />
+			<statistic name="error_percentile" severity="none" unit="%"
+				value="21.1" />
+			<statistic name="total_logical_actions_errors" severity="none"
+				unit="" value="0" />
+			<statistic name="total_hits_percentage" severity="none"
+				unit="" value="100%" />
+			<statistic name="avg_pageresponsetime_diff" severity="none"
+				unit="s" value="0%" />
+			<statistic name="error_percentile_diff" severity="none"
+				unit="%" value="0%" />
+		</global_statistics>
+	</zones_statistics>
+	<populations_statistics
+		avgDurationPopulationsImage="images/avgDurationPopulations.png"
+		errorsPopulationsImage="images/errorsPopulations.png" scenario="scenario1">
+		<population_statistics name="Population1">
+			<statistic name="avg_hits/s" severity="none" unit="" value="1.3" />
+			<statistic name="avg_pages/s" severity="none" unit=""
+				value="0.5" />
+			<statistic name="avg_reqresponsetime" severity="none" unit="s"
+				value="0.44" />
+			<statistic name="avg_pageresponsetime" severity="none"
+				unit="s" value="1.04" />
+			<statistic name="avg_throughput" severity="none" unit=" Mb/s"
+				value="0.03" />
+			<statistic name="total_pages" severity="none" unit=""
+				value="64" />
+			<statistic name="total_hits" severity="none" unit="" value="152" />
+			<statistic name="total_users_launched" severity="none"
+				unit="" value="0" />
+			<statistic name="total_throughput" severity="none" unit=" MB"
+				value="0.38" />
+			<statistic name="total_iterations_completed" severity="none"
+				unit="" value="0" />
+			<statistic name="total_errors" severity="none" unit=""
+				value="32" />
+			<statistic name="error_percentile" severity="none" unit="%"
+				value="21.1" />
+			<statistic name="total_logical_actions_errors" severity="none"
+				unit="" value="0" />
+			<statistic name="total_hits_percentage" severity="none"
+				unit="" value="100%" />
+			<statistic name="avg_pageresponsetime_diff" severity="none"
+				unit="s" value="0%" />
+			<statistic name="error_percentile_diff" severity="none"
+				unit="%" value="0%" />
+		</population_statistics>
+		<global_statistics>
+			<statistic name="avg_hits/s" severity="none" unit="" value="1.3" />
+			<statistic name="avg_pages/s" severity="none" unit=""
+				value="0.5" />
+			<statistic name="avg_reqresponsetime" severity="none" unit="s"
+				value="0.44" />
+			<statistic name="avg_pageresponsetime" severity="none"
+				unit="s" value="1.04" />
+			<statistic name="avg_throughput" severity="none" unit=" Mb/s"
+				value="0.03" />
+			<statistic name="total_pages" severity="none" unit=""
+				value="64" />
+			<statistic name="total_hits" severity="none" unit="" value="152" />
+			<statistic name="total_users_launched" severity="none"
+				unit="" value="2" />
+			<statistic name="total_throughput" severity="none" unit=" MB"
+				value="0.38" />
+			<statistic name="total_iterations_completed" severity="none"
+				unit="" value="8" />
+			<statistic name="total_errors" severity="none" unit=""
+				value="32" />
+			<statistic name="error_percentile" severity="none" unit="%"
+				value="21.1" />
+			<statistic name="total_logical_actions_errors" severity="none"
+				unit="" value="0" />
+			<statistic name="total_hits_percentage" severity="none"
+				unit="" value="100%" />
+			<statistic name="avg_pageresponsetime_diff" severity="none"
+				unit="s" value="0%" />
+			<statistic name="error_percentile_diff" severity="none"
+				unit="%" value="0%" />
+		</global_statistics>
+	</populations_statistics>
+	<virtual-users>
+		<statistic-item avg="48.3" error_rate="100" errors="2"
+			hits="2" id="VirtualUser" max="48.4" median="48.3" min="48.3" name="VirtualUser"
+			parentName="Virtual User Profiles" stddev="&lt;0.01" truncatedMean="48.3"
+			type="virtualuser">
+			<statistic-item avg="&lt;0.01" error_rate="0" errors="0"
+				hits="2" id="$parent=VirtualUser;$index=0" max="&lt;0.01" median="&lt;0.01"
+				min="&lt;0.01" name="Init" parentName="VirtualUser" stddev="&lt;0.01"
+				truncatedMean="&lt;0.01" type="container">
+				<sla-profiles-details />
+			</statistic-item>
+			<statistic-item avg="13.1" error_rate="100" errors="6"
+				hits="6" id="$parent=VirtualUser;$index=1" max="14.2" median="&lt;0.01"
+				min="12.2" name="Actions" parentName="VirtualUser" stddev="&lt;0.01"
+				truncatedMean="&lt;0.01" type="container">
+				<sla-profiles-details />
+				<statistic-item avg="0.655" error_rate="0" errors="0"
+					hits="8" id="4544491d-914e-4a37-86e1-61660f80ac25" max="1.56"
+					median="0.376" min="0.314"
+					name="/app/projects/f74785d9-93a0-4427-b5d7-c2262048c0dc"
+					parentName="Actions" stddev="0.558" truncatedMean="0.526" type="httppage">
+					<sla-profiles-details />
+				</statistic-item>
+				<statistic-item avg="0.322" error_rate="100" errors="8"
+					hits="8" id="92000685-37a9-4a65-ba3c-e67445dee985" max="0.34"
+					median="0.325" min="0.308" name="/favicon.ico" parentName="Actions"
+					stddev="0.011" truncatedMean="0.319" type="httppage">
+					<sla-profiles-details />
+				</statistic-item>
+				<statistic-item avg="0.327" error_rate="100" errors="8"
+					hits="8" id="9a279102-84b9-4304-b1eb-d850950b4cc0" max="0.422"
+					median="0.314" min="0.311" name="/favicon.ico_1" parentName="Actions"
+					stddev="0.025" truncatedMean="0.321" type="httppage">
+					<sla-profiles-details />
+				</statistic-item>
+				<statistic-item avg="1.35" error_rate="0" errors="0"
+					hits="8" id="258c9d71-6edf-4d94-8bf9-76a51a4c955c" max="1.58"
+					median="1.3" min="1.23"
+					name="/oam/SSOPOST/metaAlias/External/psc-rbmobile-idp-test"
+					parentName="Actions" stddev="0.146" truncatedMean="1.32" type="httppage">
+					<sla-profiles-details />
+				</statistic-item>
+				<statistic-item avg="1.07" error_rate="0" errors="0"
+					hits="8" id="04543e0d-092a-4bd7-bdb5-4ba2ba88ba63" max="1.2"
+					median="1.07" min="0.985" name="/oam/UI/Login" parentName="Actions"
+					stddev="0.078" truncatedMean="1.06" type="httppage">
+					<sla-profiles-details />
+				</statistic-item>
+				<statistic-item avg="0.159" error_rate="100" errors="8"
+					hits="8" id="f3842458-7427-4c82-81e9-81c5413e18f7" max="0.326"
+					median="0.156" min="&lt;0.01" name="/" parentName="Actions" stddev="0.171"
+					truncatedMean="0.136" type="httppage">
+					<sla-profiles-details />
+				</statistic-item>
+				<statistic-item avg="0.348" error_rate="0" errors="0"
+					hits="8" id="2a996365-6a33-4921-9fbc-59cf02c39da1" max="0.446"
+					median="0.322" min="0.314"
+					name="/app/projects/f74785d9-93a0-4427-b5d7-c2262048c0dc_1"
+					parentName="Actions" stddev="0.054" truncatedMean="0.336" type="httppage">
+					<sla-profiles-details />
+				</statistic-item>
+				<statistic-item avg="4.12" error_rate="100" errors="8"
+					hits="8" id="2edaa0cd-57fa-4a45-ab74-58a1010712c8" max="4.44"
+					median="4.17" min="3.82" name="/app/rest/tracking" parentName="Actions"
+					stddev="0.161" truncatedMean="4.1" type="httppage">
+					<sla-profiles-details />
+				</statistic-item>
+			</statistic-item>
+			<statistic-item avg="&lt;0.01" error_rate="0" errors="0"
+				hits="2" id="$parent=VirtualUser;$index=2" max="&lt;0.01" median="&lt;0.01"
+				min="&lt;0.01" name="End" parentName="VirtualUser" stddev="&lt;0.01"
+				truncatedMean="&lt;0.01" type="container">
+				<sla-profiles-details />
+			</statistic-item>
+		</statistic-item>
+	</virtual-users>
+	<media-items>
+		<media-item name="VirtualUser" />
+	</media-items>
+	<monitors>
+		<monitored-host name="NeoLoad">
+			<monitor name="NeoLoad">
+				<counters>
+					<statistic-item avg="1.98" error_rate="0" errors="0"
+						hits="0" max="2" median="2" min="0" name="NeoLoad/User Load"
+						stddev="0.182" truncatedMean="2" type="counter" />
+					<statistic-item avg="0.024" error_rate="0" errors="0"
+						hits="0" max="0.214" median="0" min="0" name="NeoLoad/Throughput"
+						stddev="0.046" truncatedMean="0.017" type="counter" />
+					<statistic-item avg="0" error_rate="0" errors="0"
+						hits="0" max="0" median="0" min="0" name="NeoLoad/Alerts" stddev=" - "
+						truncatedMean="0" type="counter" />
+					<statistic-item avg="0" error_rate="0" errors="0"
+						hits="0" max="0" median="0" min="0" name="NeoLoad/Critical Alerts"
+						stddev=" - " truncatedMean="0" type="counter" />
+					<statistic-item avg="0" error_rate="0" errors="0"
+						hits="0" max="0" median="0" min="0" name="NeoLoad/Warning Alerts"
+						stddev=" - " truncatedMean="0" type="counter" />
+					<statistic-item avg="1.98" error_rate="0" errors="0"
+						hits="0" max="2" median="2" min="0" name="NeoLoad/Default zone/User Load"
+						stddev="0.182" truncatedMean="2" type="counter" />
+				</counters>
+				<indicators />
+				<alerts />
+			</monitor>
+		</monitored-host>
+		<monitored-host name="LG localhost">
+			<monitor name="LG localhost">
+				<counters>
+					<statistic-item avg="21.9" error_rate="0" errors="0"
+						hits="0" max="51" median="19" min="0" name="LG localhost/CPU"
+						stddev="8.2" truncatedMean="21" type="counter" />
+					<statistic-item avg="12.8" error_rate="0" errors="0"
+						hits="0" max="17" median="13" min="7" name="LG localhost/Memory"
+						stddev="2.09" truncatedMean="12.9" type="counter" />
+					<statistic-item avg="0.024" error_rate="0" errors="0"
+						hits="0" max="0.214" median="0" min="0" name="LG localhost/Throughput"
+						stddev="0.046" truncatedMean="0.017" type="counter" />
+					<statistic-item avg="1.98" error_rate="0" errors="0"
+						hits="0" max="2" median="2" min="0" name="LG localhost/User Load"
+						stddev="0.182" truncatedMean="2" type="counter" />
+					<statistic-item avg="19" error_rate="0" errors="0"
+						hits="0" max="125.2" median="10.11" min="0"
+						name="LG localhost/Network/Segments sent/sec." stddev="23.5"
+						truncatedMean="16.2" type="counter" />
+					<statistic-item avg="0.042" error_rate="0" errors="0"
+						hits="0" max="2.6" median="0" min="0"
+						name="LG localhost/Network/Segments retransmitted/sec." stddev="0.327"
+						truncatedMean="0" type="counter" />
+					<statistic-item avg="0.044" error_rate="0" errors="0"
+						hits="0" max="0.318" median="0.021" min="0.003"
+						name="LG localhost/Network/eth4 (Intel(R) 82577LM Gigabit Network Connection)/Megabits received/sec."
+						stddev="0.052" truncatedMean="0.037" type="counter" />
+					<statistic-item avg="0.025" error_rate="0" errors="0"
+						hits="0" max="0.162" median="0.001" min="0"
+						name="LG localhost/Network/eth4 (Intel(R) 82577LM Gigabit Network Connection)/Megabits sent/sec."
+						stddev="0.042" truncatedMean="0.019" type="counter" />
+					<statistic-item avg="0.013" error_rate="0" errors="0"
+						hits="0" max="0.688" median="0" min="0"
+						name="LG localhost/Network/net5 (Intel(R) Centrino(R) Advanced-N 6200 AGN)/Megabits received/sec."
+						stddev="0.079" truncatedMean="0.001" type="counter" />
+					<statistic-item avg="0.001" error_rate="0" errors="0"
+						hits="0" max="0.043" median="0" min="0"
+						name="LG localhost/Network/net5 (Intel(R) Centrino(R) Advanced-N 6200 AGN)/Megabits sent/sec."
+						stddev="0.005" truncatedMean="0.001" type="counter" />
+					<statistic-item avg="0" error_rate="0" errors="0"
+						hits="0" max="0" median="0" min="0"
+						name="LG localhost/Network/eth9 (Bluetooth Device (Personal Area Network) #2)/Megabits received/sec."
+						stddev=" - " truncatedMean="0" type="counter" />
+					<statistic-item avg="0" error_rate="0" errors="0"
+						hits="0" max="0" median="0" min="0"
+						name="LG localhost/Network/eth9 (Bluetooth Device (Personal Area Network) #2)/Megabits sent/sec."
+						stddev=" - " truncatedMean="0" type="counter" />
+					<statistic-item avg="0" error_rate="0" errors="0"
+						hits="0" max="0" median="0" min="0"
+						name="LG localhost/Network/net9 (Microsoft Virtual WiFi Miniport Adapter)/Megabits received/sec."
+						stddev=" - " truncatedMean="0" type="counter" />
+					<statistic-item avg="0" error_rate="0" errors="0"
+						hits="0" max="0" median="0" min="0"
+						name="LG localhost/Network/net9 (Microsoft Virtual WiFi Miniport Adapter)/Megabits sent/sec."
+						stddev=" - " truncatedMean="0" type="counter" />
+					<statistic-item avg="1.98" error_rate="0" errors="0"
+						hits="0" max="2" median="2" min="0"
+						name="LG localhost/Population1/User Load" stddev="0.182"
+						truncatedMean="2" type="counter" />
+					<statistic-item avg="1.98" error_rate="0" errors="0"
+						hits="0" max="2" median="2" min="0"
+						name="LG localhost/Population1/VirtualUser/User Load" stddev="0.182"
+						truncatedMean="2" type="counter" />
+				</counters>
+				<indicators />
+				<alerts />
+			</monitor>
+		</monitored-host>
+	</monitors>
+	<thirdparty-data-summary>
+		<thirdparty-data-summary-category
+			category="CATEGORY_HARDWAREOS" />
+		<thirdparty-data-summary-category
+			category="CATEGORY_SOFTWARE" />
+		<thirdparty-data-summary-category
+			category="CATEGORY_LOCATION" />
+		<thirdparty-data-summary-category
+			category="CATEGORY_SCRIPT" />
+		<thirdparty-data-paths />
+	</thirdparty-data-summary>
+	<dashboards>
+		<dashboard name="Main graphs">
+			<graph image="images/pages_avg.png" name="pages.average"
+				title="Average page response time">
+				<statistic-item avg="1.045" max="4.282" median="0.526"
+					min="0.313" name="pages.average" stddev="1.233" truncatedMean="0.86"
+					type="graphstatistic" />
+				<note>Displays the average response time, in seconds, of all pages
+					during the test.</note>
+			</graph>
+			<graph image="images/requests_avg.png" name="requests.average"
+				title="Average request response time">
+				<statistic-item avg="0.44" max="1.578" median="0.335"
+					min="0.313" name="requests.average" stddev="0.277" truncatedMean="0.389"
+					type="graphstatistic" />
+				<note>Displays the average response time, in seconds, of all
+					requests during the test.</note>
+			</graph>
+			<graph image="images/containers_avg.png" name="containers.average"
+				title="Average response time (containers)">
+				<statistic-item avg="0" max="0" median="0" min="0"
+					name="containers.average" stddev="0" truncatedMean="0" type="graphstatistic" />
+				<note>Displays the average response time, in seconds, of all
+					containers during the test.</note>
+			</graph>
+			<graph image="images/hits.png" name="hits" title="Hits per second">
+				<statistic-item avg="1.3" max="7" median="0" min="0"
+					name="hits" stddev="2.1" truncatedMean="1" type="graphstatistic" />
+				<note>Displays the number of hits on the server by Virtual Users.</note>
+			</graph>
+			<graph image="images/errors.png" name="errors" title="Errors">
+				<statistic-item avg="0.3" max="4" median="0" min="0"
+					name="errors" stddev="0.8" truncatedMean="0.1" type="graphstatistic" />
+				<note>Displays the number of errors per sampling interval.</note>
+			</graph>
+			<graph image="images/throughput.png" name="throughput" title="Throughput">
+				<statistic-item avg="0.02" max="0.21" median="0" min="0"
+					name="throughput" stddev="0.05" truncatedMean="0.02" type="graphstatistic" />
+				<note>Displays the number of megabits of data per second returned by
+					the server.</note>
+			</graph>
+			<graph image="images/percentile.png" name="percentile"
+				title="Distribution of Page Response Times">
+				<note>Displays the percentage of pages that were performed within a
+					given time range. This graph helps determine the percentage of
+					pages that meet a performance objective. For example, it may show
+					that 90% of the pages have a response time under n seconds.</note>
+			</graph>
+		</dashboard>
+		<dashboard name="Graph board" />
+	</dashboards>
+</report>
